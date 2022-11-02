@@ -4,13 +4,19 @@ import Button from "./form/Button";
 import Navbar from "./components/Navbar";
 import Input from "./form/Input";
 import SelectFile from "./form/SelectFile";
+import ToggleNav from "./components/Navbar/ToggleNav";
 
 function App() {
+  const [showNav, setShowNav] = React.useState(false);
   return (
     <>
-      <Navbar classes="nav-box-shadow nav-container nav-space-between nav-flex">
-        <div className="">logo</div>
-        <div className="nav-flex">
+      <Navbar
+        classes={`nav-box-shadow nav-container nav-space-between nav-flex ${
+          showNav ? "open-menu" : ""
+        }`}
+      >
+        <div className="nav-logo">logo</div>
+        <div className="nav-flex responsive-navbar">
           <ul className="nav-lists">
             <li className="nav-list-item large">Home</li>
             <li className="nav-list-item medium">About</li>
@@ -25,10 +31,11 @@ function App() {
             classes="btn btn-primary btn-shadow btn-hover-box-shadow-transition btn-semi-rounded"
           />
         </div>
+        <ToggleNav handleClick={() => setShowNav(!showNav)} />
       </Navbar>
       <Button
         text="Buy your first domain"
-        classes="btn space-letters-1 btn-shadow btn-success btn-circle"
+        classes="btn space-letters-1 btn-shadow space-around btn-circle"
         onClick={() => alert("Hello")}
       />
       <CustomRoutes
@@ -38,10 +45,9 @@ function App() {
           { item: <h1>Contact</h1>, id: 3, path: "/contact" },
         ]}
       />
-      <div className="" style={{ width: "800px" }}>
-        <Input required="required" label="First Name" />
-        <Input label="Last Name" />
-      </div>
+      <Input required="required" label="First Name" />
+      <Input label="Last Name" />
+
       <SelectFile classes="space-left space-top" />
     </>
   );
