@@ -2,6 +2,7 @@ import React from "react";
 import CustomRoutes from "./routes/Routes";
 import Button from "./components/Button";
 import Navbar from "./components/Navbar";
+import Input from "./components/form/Input";
 
 function App() {
   return (
@@ -14,7 +15,10 @@ function App() {
             <li className="nav-list-item medium">About</li>
             <li className="nav-list-item small">Contact</li>
           </ul>
-          <Button text="Page Update" classes="btn  btn-info btn-semi-rounded space-letters-2" />
+          <Button
+            text="Page Update"
+            classes="btn space-left-right  btn-info btn-semi-rounded space-letters-2"
+          />
           <Button
             text="Sign Up"
             classes="btn btn-primary btn-shadow btn-hover-box-shadow-transition btn-semi-rounded"
@@ -32,6 +36,15 @@ function App() {
           { item: <h1>About</h1>, id: 2, path: "/about" },
           { item: <h1>Contact</h1>, id: 3, path: "/contact" },
         ]}
+      />
+      <Input
+        required=""
+        label="First Name"
+        classes=" input-border-none input-border-bottom input-focus input-required-not-filled"
+      />
+      <Input
+        label="Last Name"
+        classes=" input-border-none input-border-bottom input-rounde input-focus input-required-not-filled"
       />
     </>
   );

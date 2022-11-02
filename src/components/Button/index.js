@@ -1,9 +1,9 @@
 import React from 'react'
 import './button.css'
 
-const index = ({text, onClick, classes, ...otherProps}) => {
+const index = ({text, type, onClick, classes, ...otherProps}) => {
   return (
-    <button className={classes} onClick={onClick} {...otherProps}>{text}</button>
+    <button type={type} className={classes} onClick={onClick} {...otherProps}>{text}</button>
   )
 }
 

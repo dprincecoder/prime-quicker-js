@@ -1,0 +1,94 @@
+/* .input-with-label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+input {
+  display: block;
+  width: 50%;
+  padding: 0 0.5rem;
+  border: 1px solid black;
+  font-size: 1rem;
+}
+
+.input-border-none {
+  border: none;
+}
+
+.input-border-bottom {
+  border-bottom: 3px solid #1e1e1e;
+}
+
+.required {
+  color: red;
+  font-size: 1.5rem;
+}
+
+*/
+
+.input-box {
+  position: relative;
+  width: 300px;
+  margin-top: 40px;
+}
+
+input {
+  border-bottom: 3px solid #23242a;
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  color: #23242a;
+  outline: none;
+  letter-spacing: 0.05em;
+  background: transparent;
+  z-index: 10;
+}
+
+.input-box .label-required {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  color: #037fff;
+  pointer-events: none;
+  color: #8f8f8f;
+  transition: 0.5s;
+}
+
+.input-box input:focus {
+  border-bottom: 3px solid #037fff;
+  transition: 0.5s;
+}
+
+.input-box input:focus ~ .label-required {
+  color: #037fff;
+  font-size: 1.2rem;
+  transform: translateY(-34px);
+  -webkit-transform: translateY(-34px);
+  -moz-transform: translateY(-34px);
+  -ms-transform: translateY(-34px);
+  -o-transform: translateY(-34px);
+}
+
+.input-box input:valid ~ .label-required {
+  color: #037fff;
+  font-size: 1.2rem;
+  transform: translateY(-34px);
+  -webkit-transform: translateY(-34px);
+  -moz-transform: translateY(-34px);
+  -ms-transform: translateY(-34px);
+  -o-transform: translateY(-34px);
+}
+
+.input-rounded {
+  border-radius: 0.5rem;
+  border: 3px solid #1e1e1e;
+}
+
+.required {
+  color: red;
+  font-size: 1.2rem;
+}
