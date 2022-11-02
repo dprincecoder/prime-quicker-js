@@ -12,13 +12,14 @@ const index = ({
   ...otherProps
 }) => {
   return (
-    <div className="input-box">
+    <div className="input-wrap">
       <input
         className={classes}
         name={name}
         type={type}
         value={value}
         required={required}
+        placeholder=" "
         onChange={handleChange}
         {...otherProps}
       />

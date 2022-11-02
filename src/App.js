@@ -1,8 +1,8 @@
 import React from "react";
 import CustomRoutes from "./routes/Routes";
-import Button from "./components/Button";
+import Button from "./form/Button";
 import Navbar from "./components/Navbar";
-import Input from "./components/form/Input";
+import Input from "./form/Input";
 
 function App() {
   return (
@@ -37,15 +37,13 @@ function App() {
           { item: <h1>Contact</h1>, id: 3, path: "/contact" },
         ]}
       />
-      <Input
-        required=""
-        label="First Name"
-        classes=" input-border-none input-border-bottom input-focus input-required-not-filled"
-      />
-      <Input
-        label="Last Name"
-        classes=" input-border-none input-border-bottom input-rounde input-focus input-required-not-filled"
-      />
+      <div className="" style={{ width: "800px" }}>
+        <Input
+          required="required"
+          label="First Name"
+        />
+        <Input label="Last Name"/>
+      </div>
     </>
   );
 }
