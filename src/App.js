@@ -3,6 +3,7 @@ import CustomRoutes from "./routes/Routes";
 import Button from "./form/Button";
 import Navbar from "./components/Navbar";
 import Input from "./form/Input";
+import SelectFile from "./form/SelectFile";
 
 function App() {
   return (
@@ -38,12 +39,10 @@ function App() {
         ]}
       />
       <div className="" style={{ width: "800px" }}>
-        <Input
-          required="required"
-          label="First Name"
-        />
-        <Input label="Last Name"/>
+        <Input required="required" label="First Name" />
+        <Input label="Last Name" />
       </div>
+      <SelectFile classes="space-left space-top" />
     </>
   );
 }

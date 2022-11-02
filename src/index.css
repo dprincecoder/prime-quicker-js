@@ -62,6 +62,35 @@ h1 {
 }
 
 
+.space-around {
+ margin: 1rem;
+}
+
+.space-up-down {
+  margin: 1rem 0;
+}
+
+.space-left-right {
+  margin: 0 1rem;
+}
+
+.space-right {
+  margin-right: 1rem;
+}
+
+.space-left {
+  margin-left: 1rem;
+}
+
+.space-top {
+  margin-top: 1rem;
+}
+
+.space-bottom {
+  margin-bottom: 1rem;
+}
+
+
 section {
   margin-top: 4rem;
 }
