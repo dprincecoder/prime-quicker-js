@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-color: #333;
+  --bg-color: #eee;
+  --link-color: cornflowerblue;
+}
+
+/* update color when in dark mode */
+[data-theme="dark"] {
+  --font-color: #eee;
+  --bg-color: #333;
+  --link-color: lightblue;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+}
+
+a {
+  color: var(--link-color);
+}
+
+/* custom toggle element */
+.toggle-theme-container {
+  position: relative;
+  /* width: 100%; */
+  margin: 5px auto;
+  /* padding: 0 20px; */
+}
+.toggle-theme-wrapper {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.toggle-theme-wrapper span {
+  font-size: 20px;
+}
+
+.toggle-theme {
+  position: relative;
+  display: inline-block;
+  height: 23px;
+  width: 40px;
+}
+
+.toggle-theme input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  transition: 0.2s;
+  overflow: hidden;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+
+.slider::before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 15px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  width: 15px;
+}
+
+input:checked + .slider::before {
+  transform: translateX(18px);
+  -webkit-transform: translateX(18px);
+  -moz-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  -o-transform: translateX(18px);
+}
+
+input:checked + .slider {
+  background-color: cornflowerblue;
+}
+
+.slider.round {
+  border-radius: 34px;
+  -webkit-border-radius: 34px;
+  -moz-border-radius: 34px;
+  -ms-border-radius: 34px;
+  -o-border-radius: 34px;
+}
+
+.slider.slider.round::before {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
