@@ -5,9 +5,16 @@ import Navbar from "./components/Navbar";
 import Input from "./form/Input";
 import SelectFile from "./form/SelectFile";
 import ToggleNav from "./components/Navbar/ToggleNav";
+import { addNumbers } from "./helpers";
+
+
 
 function App() {
   const [showNav, setShowNav] = React.useState(false);
+
+  const sum = addNumbers(4, 6);
+  console.log(sum);
+
   return (
     <>
       <Navbar
